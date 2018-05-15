@@ -1,10 +1,9 @@
 <template name="messages">
     <div class="message-history">
         <div class="message">
-            {{> message text="All these messages"}}
-            {{> message text="Uses the same template"}}
-            {{> message text="But have a different data context"}}
-            {{> message text="It's why these messages are all different!"}}
+            {{#each messages}}
+                {{> message text=text}}
+            {{/each}}
         </div>
     </div>
 </template>
