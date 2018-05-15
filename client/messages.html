@@ -1,9 +1,7 @@
 <template name="messages">
     <div class="message-history">
-        <div class="message">
-            {{#each messages}}
-                {{> message text=text}}
-            {{/each}}
-        </div>
+        {{#each messages}}
+            {{> message text=text}}
+        {{/each}}
     </div>
 </template>
