@@ -1,3 +1,5 @@
-Meteor.publish('messages', () => {
-	return Messages.find();
+Meteor.publish('messages', (channel) => {
+	return Messages.find({
+		channel
+	});
 });
