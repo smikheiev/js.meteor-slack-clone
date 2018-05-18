@@ -6,9 +6,12 @@ Template.footer.events({
 			if (!!inputValue) {
 				event.stopPropagation();
 
-				Meteor.call('newMessage', {text: inputValue});
+				Meteor.call('newMessage', {
+					text: inputValue,
+					channel: Session.get('channel')
+				});
 
-				$('.input-box_text').val("");
+				$('.input-box_text').val('');
 
 				return false;
 			}
