@@ -1,14 +1,3 @@
-Template.registerHelper('usernameFromId', (userId) => {
-	const user = Meteor.users.findOne({_id: userId});
-	if (!user) {
-		return 'Anonymous';
-	}
-	if (user.services.github) {
-		return user.services.github.username;
-	}
-	return user.username;
-});
-
 Template.registerHelper('timestampToTime', (timestamp) => {
 	const date = new Date(timestamp);
 	const hours = date.getHours();

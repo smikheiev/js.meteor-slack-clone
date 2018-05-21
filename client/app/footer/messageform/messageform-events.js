@@ -1,4 +1,4 @@
-Template.footer.events({
+Template.messageform.events({
 	'keypress input': (event) => {
 		if (event.charCode === 13) {
 			const inputValue = $('.input-box_text').val();
